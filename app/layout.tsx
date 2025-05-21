@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,9 +25,66 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6DQD5NqQ1hL0E3oZ1F1B1z0ynE2e5r5F6gWl5y5n0e4k"
+          crossOrigin="anonymous"
+        />
+        <style>{`
+          body {
+            background: #f8fafc;
+          }
+          .navbar {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: #1e3a8a !important;
+          }
+          .navbar .navbar-brand, .navbar .nav-link {
+            color: #fff !important;
+          }
+          .navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+            color: #60a5fa !important;
+            background: rgba(255,255,255,0.05);
+            border-radius: 0.25rem;
+          }
+          .navbar .btn-outline-primary {
+            color: #fff;
+            border-color: #60a5fa;
+            background: transparent;
+          }
+          .navbar .btn-outline-primary:hover {
+            background: #60a5fa;
+            color: #1e3a8a;
+            border-color: #60a5fa;
+          }
+          .navbar .btn-primary {
+            background: #60a5fa;
+            border-color: #60a5fa;
+            color: #1e3a8a;
+          }
+          .navbar .btn-primary:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: #fff;
+          }
+          .navbar-nav {
+            align-items: center;
+          }
+          @media (max-width: 991.98px) {
+            .navbar-nav {
+              flex-direction: column !important;
+              width: 100%;
+            }
+            .navbar .d-flex.ms-lg-auto {
+              margin-left: 0 !important;
+              margin-top: 1rem;
+            }
+          }
+        `}</style>
+      </head>
+      <body>
+        <Navbar />
         {children}
       </body>
     </html>
