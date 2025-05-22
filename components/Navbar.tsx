@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
+import AuthButtons from "./AuthButtons";
 
 export default function Navbar() {
   useEffect(() => {
@@ -36,8 +37,7 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="d-flex gap-2 ms-lg-auto">
-            <button className="btn btn-outline-light px-4" type="button">Login</button>
-            <button className="btn btn-light text-primary px-4" type="button">Register</button>
+            <AuthButtons />
           </div>
         </div>
       </div>
