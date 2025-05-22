@@ -1,0 +1,9 @@
+/* Import Bootstrap RTL only for RTL support (Persian) */
+@import url('bootstrap-rtl/dist/css/bootstrap-rtl.min.css');
+
+/* Increase navbar height for better appearance */
+.navbar {
+  min-height: 80px !important;
+}
+
+/* Optional: Add more global styles here */ 
