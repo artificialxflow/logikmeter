@@ -3,6 +3,8 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../components/Navbar";
 import ClientRoot from "../components/ClientRoot";
+import { ReactNode } from 'react';
+import { LanguageProvider } from '../components/LanguageProvider';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,15 +14,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>
-        <ClientRoot>
-          <Navbar />
-          {children}
-        </ClientRoot>
+        <LanguageProvider>
+          <ClientRoot>
+            <Navbar />
+            {children}
+          </ClientRoot>
+        </LanguageProvider>
       </body>
     </html>
   );
