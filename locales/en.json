@@ -61,5 +61,18 @@
   "active": "Active",
   "voting": "Voting",
   "completed": "Completed",
-  "discussionLoadError": "Failed to load discussion."
+  "discussionLoadError": "Failed to load discussion.",
+  "feature_ai_analysis": "AI-Powered Topic Analysis",
+  "feature_ai_analysis_desc": "Leverage advanced AI to analyze and structure your topics for deeper insights and better discussions.",
+  "feature_discussions": "Live Discussions",
+  "feature_discussions_desc": "Start or join real-time discussions, collaborate, and vote on logical topics with others.",
+  "feature_crypto_rewards": "Crypto Rewards",
+  "feature_crypto_rewards_desc": "Earn LMC tokens for participating in polls, discussions, and contributing to the community.",
+  "howItWorks": "How It Works",
+  "howItWorks_step1": "Sign up and log in to your account.",
+  "howItWorks_step2": "Create or explore logical topics and request AI analysis.",
+  "howItWorks_step3": "Participate in polls and discussions to share your insights.",
+  "howItWorks_step4": "Earn LMC crypto rewards for your engagement.",
+  "howItWorks_step5": "Transfer or use your LMC tokens in the built-in wallet.",
+  "getStarted": "Get Started Now"
 } 
