@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "../components/Navbar";
-import ClientRoot from "../components/ClientRoot";
 import { ReactNode } from 'react';
+import AppClientLayout from "../components/AppClientLayout";
 import { LanguageProvider } from '../components/LanguageProvider';
 
 export const metadata: Metadata = {
@@ -20,10 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LanguageProvider>
-          <ClientRoot>
-            <Navbar />
-            {children}
-          </ClientRoot>
+          <AppClientLayout>{children}</AppClientLayout>
         </LanguageProvider>
       </body>
     </html>
