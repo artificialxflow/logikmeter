@@ -206,6 +206,14 @@ class RewardService {
   - Monitoring setup
   - Backup procedures
 
+## 11. UI/UX and RTL Enhancements
+
+- [x] Persian homepage fully RTL and visually matches English design
+- [x] Navbar layout consistent in both English and Persian (menu next to brand, auth/language on far right)
+- [x] Brand is always 'LogikMeter' in both languages
+- [x] All navigation and layout elements are i18n and RTL-aware
+- [x] Responsive, modern Bootstrap design for all main pages
+
 This plan provides complete coverage of your requirements while adding necessary technical depth and implementation specifics. Each component includes all the detailed steps needed for a robust production-ready implementation. Would you like me to elaborate on any particular section?
 
 # ---
