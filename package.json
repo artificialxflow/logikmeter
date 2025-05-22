@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.6",
+    "bootstrap-rtl": "^3.3.4",
     "mongoose": "^8.15.0",
     "next": "15.3.2",
     "next-auth": "^4.24.11",
