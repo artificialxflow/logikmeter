@@ -1,8 +1,9 @@
-export default function Home() {
+"use client";
+export default function HomePage() {
   return (
-    <div className="container mt-5">
-      <h1>Welcome to the Next.js Template</h1>
-      <p>This is a simple  page.</p>
+    <div className="container py-5">
+      <h1 className="mb-3">Home</h1>
+      <p>Welcome to the Home page. This is your Next.js + Bootstrap starter template.</p>
     </div>
   );
 }
