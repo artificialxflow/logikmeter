@@ -28,6 +28,51 @@ LogikMeter is a web application that enables users to create, analyze, and discu
 - **Scheduling:** node-cron
 - **AI Integration:** n8n for topic analysis
 
+## Required Versions for Deployment
+
+To ensure smooth deployment and avoid build/runtime errors (especially on Coolify), use the following versions:
+
+- **Node.js:** `18.20.5`  
+  _Recommended: Use Node.js 18 LTS. (Coolify and Next.js 15+ are fully compatible with Node 18.x)_
+- **npm:** `10.8.2`  
+  _This is the version used in your build logs. Any npm 9+ is fine, but 10.x is recommended for Node 18.20.5._
+- **Next.js:** `15.3.2`  
+  _As specified in your `package.json`._
+- **React:** `19.0.0`  
+  _As specified in your `package.json`._
+- **React DOM:** `19.0.0`  
+  _As specified in your `package.json`._
+- **TypeScript:** `^5.0.0`  
+  _As specified in your `package.json`._
+- **Mongoose:** `^8.15.0`  
+  _As specified in your `package.json`._
+- **Bootstrap:** `^5.3.6`  
+  _As specified in your `package.json`._
+- **Bootstrap RTL:** `^3.3.4`  
+  _Note: This is an old version and may show warnings, but it works for CSS. For Bootstrap 5+ RTL, consider [RTL Bootstrap 5 solutions](https://rtlcss.com/)._
+- **NextAuth.js:** `^4.24.11`  
+  _As specified in your `package.json`._
+- **Tailwind CSS:** `^4.0.0`  
+  _As specified in your `package.json`._
+- **@tailwindcss/postcss:** `^4.0.0`  
+  _As specified in your `package.json`._
+- **PostgreSQL:** `14+` (if using Postgres)  
+  _Or MongoDB 6+ if using MongoDB. Make sure your database version matches your hosting provider's supported versions._
+
+### How to Set Node and npm Version
+
+- If you use Coolify, set the Node.js version in the project settings or via an `.nvmrc` file:
+  ```
+  18.20.5
+  ```
+- Or, in your `package.json`, add:
+  ```json
+  "engines": {
+    "node": "18.20.5",
+    "npm": "10.8.2"
+  }
+  ```
+
 ## Security & Best Practices
 - Input validation, permission checks, and secure password storage
 - HTTPS and secure cookies
