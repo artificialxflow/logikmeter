@@ -3,9 +3,14 @@ import { Discussion } from '../../../../../models/Discussion';
 import dbConnect from '../../../../../utils/dbConnect';
 
 // POST /api/discussions/[id]/complete - Mark as completed
-export async function POST(req: NextRequest, context: { params: { id: string } }) {
+export async function POST(req: NextRequest) {
   await dbConnect();
-  const { id } = context.params;
+  // Extract id from the URL
+  const url = new URL(req.url);
+  // Assumes route is /api/discussions/[id]/complete
+  const parts = url.pathname.split('/');
+  const idIndex = parts.findIndex(part => part === 'discussions') + 1;
+  const id = parts[idIndex];
   const discussion = await Discussion.findByIdAndUpdate(
     id,
     { status: 'completed', rewardsDistributed: true },
