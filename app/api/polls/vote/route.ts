@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Poll } from '../../../../models/Poll';
 import { Vote } from '../../../../models/Vote';
 import dbConnect from '../../../../utils/dbConnect';
+import mongoose from 'mongoose';
 
 // POST /api/polls/vote - Submit a vote
 export async function POST(req: NextRequest) {
@@ -16,8 +17,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Poll not found' }, { status: 404 });
   }
   // Create vote
-  const vote = await Vote.create({ pollId, userId, option });
-  poll.votes.push(vote._id);
+  const vote = await Vote.create({ pollId: new mongoose.Types.ObjectId(pollId), userId: new mongoose.Types.ObjectId(userId), option });
+  poll.votes.push(vote._id as any); // _id is ObjectId, which matches the schema
   await poll.save();
   return NextResponse.json(vote, { status: 201 });
 } 
