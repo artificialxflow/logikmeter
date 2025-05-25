@@ -3,9 +3,9 @@ import { Discussion } from '../../../../../models/Discussion';
 import dbConnect from '../../../../../utils/dbConnect';
 
 // POST /api/discussions/[id]/complete - Mark as completed
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, context: { params: { id: string } }) {
   await dbConnect();
-  const { id } = params;
+  const { id } = context.params;
   const discussion = await Discussion.findByIdAndUpdate(
     id,
     { status: 'completed', rewardsDistributed: true },
