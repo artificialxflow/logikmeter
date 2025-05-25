@@ -474,3 +474,5 @@ Response: {
    - Asynchronous loading for heavy data
 
 This prompt covers all aspects needed to implement the system. For development, you can start by implementing the data models and main pages, then add the business logic.
+
+- [x] Refactor all dynamic API route handlers to extract params from URL for maximum deployment compatibility (Coolify, Docker, etc.)
