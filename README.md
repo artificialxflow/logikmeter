@@ -189,3 +189,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## API Route Compatibility Note
+
+To ensure compatibility with all deployment environments (including Docker, Coolify, and various Next.js/TypeScript setups), all dynamic API route handlers (e.g., `/api/discussions/[id]`, `/api/polls/[id]`) extract their dynamic parameters (like `id`) from the request URL inside the handler, rather than using the `{ params }` or `context` parameter. This avoids build/type errors in environments that do not support the new App Router context signature.
