@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - LogikMeter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-brain me-2"></i>LogikMeter
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-en="Home" data-fa="خانه">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html" data-en="Dashboard" data-fa="داشبورد">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topics.html" data-en="Topics" data-fa="موضوعات">Topics</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Language Toggle -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- User Menu -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>John Doe
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="wallet.html"><i class="fas fa-wallet me-2"></i><span data-en="Wallet" data-fa="کیف پول">Wallet</span></a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i><span data-en="Settings" data-fa="تنظیمات">Settings</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i><span data-en="Logout" data-fa="خروج">Logout</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h1 class="h3" data-en="My Wallet" data-fa="کیف پول من">My Wallet</h1>
+                    <p class="text-muted" data-en="Manage your LMC coins and transaction history" data-fa="سکه‌های LMC و تاریخچه تراکنش‌های خود را مدیریت کنید">
+                        Manage your LMC coins and transaction history
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Wallet Balance -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card wallet-balance-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-coins fa-3x text-warning mb-3"></i>
+                            <h2 class="display-4 fw-bold text-warning">1,250</h2>
+                            <p class="h5 mb-3" data-en="LMC Balance" data-fa="موجودی LMC">LMC Balance</p>
+                            <p class="text-muted mb-4" data-en="Earned through discussions and voting" data-fa="از طریق بحث و رای‌گیری کسب شده">
+                                Earned through discussions and voting
+                            </p>
+                            <button class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#transferModal">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                <span data-en="Send LMC" data-fa="ارسال LMC">Send LMC</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earning Stats -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0" data-en="Earning Statistics" data-fa="آمار درآمد">Earning Statistics</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-4">
+                                <div class="col-md-3">
+                                    <div class="stat-item text-center">
+                                        <i class="fas fa-lightbulb fa-2x text-primary mb-2"></i>
+                                        <h4 class="fw-bold">400</h4>
+                                        <small class="text-muted" data-en="From Topics Created" data-fa="از ایجاد موضوعات">From Topics Created</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-item text-center">
+                                        <i class="fas fa-comments fa-2x text-success mb-2"></i>
+                                        <h4 class="fw-bold">480</h4>
+                                        <small class="text-muted" data-en="From Discussions" data-fa="از بحث‌ها">From Discussions</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-item text-center">
+                                        <i class="fas fa-vote-yea fa-2x text-info mb-2"></i>
+                                        <h4 class="fw-bold">280</h4>
+                                        <small class="text-muted" data-en="From Voting" data-fa="از رای‌گیری">From Voting</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-item text-center">
+                                        <i class="fas fa-gift fa-2x text-warning mb-2"></i>
+                                        <h4 class="fw-bold">90</h4>
+                                        <small class="text-muted" data-en="Bonus Rewards" data-fa="پاداش‌های اضافی">Bonus Rewards</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0" data-en="Transaction History" data-fa="تاریخچه تراکنش‌ها">Transaction History</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-filter me-1"></i>
+                                    <span data-en="Filter" data-fa="فیلتر">Filter</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" data-en="All Transactions" data-fa="همه تراکنش‌ها">All Transactions</a></li>
+                                    <li><a class="dropdown-item" href="#" data-en="Earned" data-fa="کسب شده">Earned</a></li>
+                                    <li><a class="dropdown-item" href="#" data-en="Sent" data-fa="ارسال شده">Sent</a></li>
+                                    <li><a class="dropdown-item" href="#" data-en="Received" data-fa="دریافت شده">Received</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th data-en="Type" data-fa="نوع">Type</th>
+                                            <th data-en="Description" data-fa="توضیحات">Description</th>
+                                            <th data-en="Amount" data-fa="مقدار">Amount</th>
+                                            <th data-en="Date" data-fa="تاریخ">Date</th>
+                                            <th data-en="Status" data-fa="وضعیت">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-lightbulb text-primary me-2"></i>
+                                                <span data-en="Topic Created" data-fa="ایجاد موضوع">Topic Created</span>
+                                            </td>
+                                            <td>Climate Change Solutions</td>
+                                            <td class="text-success fw-bold">+50 LMC</td>
+                                            <td>2 hours ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-vote-yea text-info me-2"></i>
+                                                <span data-en="Voting" data-fa="رای‌گیری">Voting</span>
+                                            </td>
+                                            <td>AI in Healthcare</td>
+                                            <td class="text-success fw-bold">+10 LMC</td>
+                                            <td>4 hours ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-comments text-success me-2"></i>
+                                                <span data-en="Discussion" data-fa="بحث">Discussion</span>
+                                            </td>
+                                            <td>Remote Learning Future</td>
+                                            <td class="text-success fw-bold">+25 LMC</td>
+                                            <td>6 hours ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-paper-plane text-warning me-2"></i>
+                                                <span data-en="Transfer Sent" data-fa="انتقال ارسالی">Transfer Sent</span>
+                                            </td>
+                                            <td>To: sarah.johnson@email.com</td>
+                                            <td class="text-danger fw-bold">-20 LMC</td>
+                                            <td>1 day ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-gift text-warning me-2"></i>
+                                                <span data-en="Bonus" data-fa="پاداش">Bonus</span>
+                                            </td>
+                                            <td>Weekly participation bonus</td>
+                                            <td class="text-success fw-bold">+15 LMC</td>
+                                            <td>1 day ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-inbox text-primary me-2"></i>
+                                                <span data-en="Transfer Received" data-fa="انتقال دریافتی">Transfer Received</span>
+                                            </td>
+                                            <td>From: mike.chen@email.com</td>
+                                            <td class="text-success fw-bold">+30 LMC</td>
+                                            <td>2 days ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-comments text-success me-2"></i>
+                                                <span data-en="Discussion" data-fa="بحث">Discussion</span>
+                                            </td>
+                                            <td>Digital Privacy Rights</td>
+                                            <td class="text-success fw-bold">+20 LMC</td>
+                                            <td>3 days ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-lightbulb text-primary me-2"></i>
+                                                <span data-en="Topic Created" data-fa="ایجاد موضوع">Topic Created</span>
+                                            </td>
+                                            <td>Remote Work Benefits</td>
+                                            <td class="text-success fw-bold">+50 LMC</td>
+                                            <td>1 week ago</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Transfer Modal -->
+    <div class="modal fade" id="transferModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        <span data-en="Send LMC Coins" data-fa="ارسال سکه LMC">Send LMC Coins</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="transferForm">
+                        <div class="mb-3">
+                            <label class="form-label" data-en="Recipient Email" data-fa="ایمیل گیرنده">Recipient Email</label>
+                            <input type="email" class="form-control" id="recipientEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-en="Amount (LMC)" data-fa="مقدار (LMC)">Amount (LMC)</label>
+                            <input type="number" class="form-control" id="transferAmount" min="1" max="1250" required>
+                            <div class="form-text" data-en="Available balance: 1,250 LMC" data-fa="موجودی در دسترس: 1,250 LMC">
+                                Available balance: 1,250 LMC
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-en="Message (Optional)" data-fa="پیام (اختیاری)">Message (Optional)</label>
+                            <textarea class="form-control" id="transferMessage" rows="3" placeholder="Add a note for the recipient..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <span data-en="Cancel" data-fa="لغو">Cancel</span>
+                    </button>
+                    <button type="button" class="btn btn-primary" id="confirmTransfer">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        <span data-en="Send LMC" data-fa="ارسال LMC">Send LMC</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span data-en="Transfer Successful!" data-fa="انتقال موفق!">Transfer Successful!</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p data-en="Your LMC coins have been successfully sent!" data-fa="سکه‌های LMC شما با موفقیت ارسال شد!">
+                        Your LMC coins have been successfully sent!
+                    </p>
+                    <div class="alert alert-info">
+                        <strong data-en="Transaction Details:" data-fa="جزئیات تراکنش:">Transaction Details:</strong><br>
+                        <span data-en="Amount:" data-fa="مقدار:">Amount:</span> <span id="sentAmount"></span> LMC<br>
+                        <span data-en="To:" data-fa="به:">To:</span> <span id="sentTo"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <span data-en="Close" data-fa="بستن">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LogikMeter</h5>
+                    <p data-en="Intelligent discussion platform with AI-powered analysis" data-fa="پلتفرم بحث هوشمند با تحلیل هوش مصنوعی">
+                        Intelligent discussion platform with AI-powered analysis
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 LogikMeter. <span data-en="All rights reserved." data-fa="تمام حقوق محفوظ است.">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Transfer functionality
+        document.getElementById('confirmTransfer').addEventListener('click', function() {
+            const email = document.getElementById('recipientEmail').value;
+            const amount = document.getElementById('transferAmount').value;
+            const message = document.getElementById('transferMessage').value;
+            
+            if (!email || !amount) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (amount > 1250) {
+                alert('Insufficient balance.');
+                return;
+            }
+            
+            // Update success modal
+            document.getElementById('sentAmount').textContent = amount;
+            document.getElementById('sentTo').textContent = email;
+            
+            // Close transfer modal and show success
+            const transferModal = bootstrap.Modal.getInstance(document.getElementById('transferModal'));
+            transferModal.hide();
+            
+            setTimeout(() => {
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            }, 300);
+        });
+    </script>
+</body>
+</html>
