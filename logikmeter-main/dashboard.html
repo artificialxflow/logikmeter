@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LogikMeter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-brain me-2"></i>LogikMeter
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-en="Home" data-fa="خانه">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html" data-en="Dashboard" data-fa="داشبورد">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topics.html" data-en="Topics" data-fa="موضوعات">Topics</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Language Toggle -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- User Menu -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>John Doe
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="wallet.html"><i class="fas fa-wallet me-2"></i><span data-en="Wallet" data-fa="کیف پول">Wallet</span></a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i><span data-en="Settings" data-fa="تنظیمات">Settings</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i><span data-en="Logout" data-fa="خروج">Logout</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="welcome-card p-4 rounded">
+                        <h1 class="h3 mb-3" data-en="Welcome back, John!" data-fa="خوش آمدید، جان!">Welcome back, John!</h1>
+                        <p class="mb-0" data-en="Ready to create meaningful discussions and earn LMC coins?" data-fa="آماده ایجاد بحث‌های معنادار و کسب سکه LMC هستید؟">
+                            Ready to create meaningful discussions and earn LMC coins?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="stat-card text-center p-4">
+                        <i class="fas fa-coins fa-2x text-warning mb-3"></i>
+                        <h3 class="fw-bold">1,250</h3>
+                        <p class="mb-0" data-en="LMC Balance" data-fa="موجودی LMC">LMC Balance</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center p-4">
+                        <i class="fas fa-lightbulb fa-2x text-primary mb-3"></i>
+                        <h3 class="fw-bold">8</h3>
+                        <p class="mb-0" data-en="Topics Created" data-fa="موضوعات ایجاد شده">Topics Created</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center p-4">
+                        <i class="fas fa-comments fa-2x text-success mb-3"></i>
+                        <h3 class="fw-bold">24</h3>
+                        <p class="mb-0" data-en="Discussions Joined" data-fa="بحث‌های شرکت کرده">Discussions Joined</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center p-4">
+                        <i class="fas fa-vote-yea fa-2x text-info mb-3"></i>
+                        <h3 class="fw-bold">156</h3>
+                        <p class="mb-0" data-en="Votes Cast" data-fa="آرای داده شده">Votes Cast</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="h4 mb-3" data-en="Quick Actions" data-fa="اقدامات سریع">Quick Actions</h2>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="create-topic.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-plus me-2"></i>
+                            <span data-en="Create New Topic" data-fa="ایجاد موضوع جدید">Create New Topic</span>
+                        </a>
+                        <a href="topics.html" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-search me-2"></i>
+                            <span data-en="Browse Topics" data-fa="مرور موضوعات">Browse Topics</span>
+                        </a>
+                        <a href="wallet.html" class="btn btn-outline-success btn-lg">
+                            <i class="fas fa-wallet me-2"></i>
+                            <span data-en="View Wallet" data-fa="مشاهده کیف پول">View Wallet</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Topics -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3" data-en="My Recent Topics" data-fa="موضوعات اخیر من">My Recent Topics</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="topic-card p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="mb-0">Climate Change Solutions</h5>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                                <p class="text-muted mb-3">Discussing practical approaches to combat climate change in urban areas...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        <i class="fas fa-users me-1"></i>12 participants
+                                    </small>
+                                    <small class="text-muted">2 hours ago</small>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="topic.html" class="btn btn-sm btn-outline-primary">
+                                        <span data-en="View Topic" data-fa="مشاهده موضوع">View Topic</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-card p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="mb-0">Remote Work Benefits</h5>
+                                    <span class="badge bg-warning">Voting</span>
+                                </div>
+                                <p class="text-muted mb-3">Analyzing the long-term effects of remote work on productivity and well-being...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        <i class="fas fa-users me-1"></i>8 participants
+                                    </small>
+                                    <small class="text-muted">1 day ago</small>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="topic.html" class="btn btn-sm btn-outline-primary">
+                                        <span data-en="View Topic" data-fa="مشاهده موضوع">View Topic</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-card p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="mb-0">Education Technology</h5>
+                                    <span class="badge bg-secondary">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">Exploring the impact of AI and VR technologies in modern education...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        <i class="fas fa-users me-1"></i>15 participants
+                                    </small>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="topic.html" class="btn btn-sm btn-outline-primary">
+                                        <span data-en="View Results" data-fa="مشاهده نتایج">View Results</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-card p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="mb-0">Sustainable Transportation</h5>
+                                    <span class="badge bg-secondary">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">Evaluating electric vehicles vs public transport for city sustainability...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        <i class="fas fa-users me-1"></i>20 participants
+                                    </small>
+                                    <small class="text-muted">1 week ago</small>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="topic.html" class="btn btn-sm btn-outline-primary">
+                                        <span data-en="View Results" data-fa="مشاهده نتایج">View Results</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LogikMeter</h5>
+                    <p data-en="Intelligent discussion platform with AI-powered analysis" data-fa="پلتفرم بحث هوشمند با تحلیل هوش مصنوعی">
+                        Intelligent discussion platform with AI-powered analysis
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 LogikMeter. <span data-en="All rights reserved." data-fa="تمام حقوق محفوظ است.">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
