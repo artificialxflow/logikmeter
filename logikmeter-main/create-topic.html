@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Topic - LogikMeter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-brain me-2"></i>LogikMeter
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-en="Home" data-fa="خانه">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html" data-en="Dashboard" data-fa="داشبورد">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topics.html" data-en="Topics" data-fa="موضوعات">Topics</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Language Toggle -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- User Menu -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>John Doe
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="wallet.html"><i class="fas fa-wallet me-2"></i><span data-en="Wallet" data-fa="کیف پول">Wallet</span></a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i><span data-en="Settings" data-fa="تنظیمات">Settings</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i><span data-en="Logout" data-fa="خروج">Logout</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Header -->
+                    <div class="mb-4 text-center">
+                        <h1 class="h3" data-en="Create New Topic" data-fa="ایجاد موضوع جدید">Create New Topic</h1>
+                        <p class="text-muted" data-en="Start a meaningful discussion with AI-powered analysis" data-fa="بحث معناداری با تحلیل هوش مصنوعی شروع کنید">
+                            Start a meaningful discussion with AI-powered analysis
+                        </p>
+                    </div>
+
+                    <!-- Topic Creation Form -->
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <form id="topicForm">
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" data-en="Topic Title" data-fa="عنوان موضوع">Topic Title</label>
+                                    <input type="text" class="form-control form-control-lg" id="topicTitle" 
+                                           placeholder="Enter a clear, descriptive title..." required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" data-en="Topic Description" data-fa="توضیحات موضوع">Topic Description</label>
+                                    <textarea class="form-control" id="topicDescription" rows="6" 
+                                              placeholder="Provide detailed context and background information..." required></textarea>
+                                    <div class="form-text" data-en="Be specific about what you want to discuss and any relevant background information." 
+                                         data-fa="در مورد آنچه می‌خواهید بحث کنید و اطلاعات پس‌زمینه مربوطه مشخص باشید.">
+                                        Be specific about what you want to discuss and any relevant background information.
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" data-en="Category" data-fa="دسته‌بندی">Category</label>
+                                    <select class="form-select" id="topicCategory" required>
+                                        <option value="" data-en="Select a category..." data-fa="دسته‌بندی را انتخاب کنید...">Select a category...</option>
+                                        <option value="technology" data-en="Technology" data-fa="فناوری">Technology</option>
+                                        <option value="environment" data-en="Environment" data-fa="محیط زیست">Environment</option>
+                                        <option value="education" data-en="Education" data-fa="آموزش">Education</option>
+                                        <option value="health" data-en="Health" data-fa="سلامت">Health</option>
+                                        <option value="business" data-en="Business" data-fa="کسب و کار">Business</option>
+                                        <option value="social" data-en="Social Issues" data-fa="مسائل اجتماعی">Social Issues</option>
+                                        <option value="other" data-en="Other" data-fa="سایر">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-primary btn-lg" id="requestAnalysis">
+                                        <i class="fas fa-robot me-2"></i>
+                                        <span data-en="Request AI Analysis" data-fa="درخواست تحلیل هوش مصنوعی">Request AI Analysis</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()">
+                                        <span data-en="Cancel" data-fa="لغو">Cancel</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- AI Analysis Results -->
+                    <div class="card mt-4" id="analysisResults" style="display: none;">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-robot text-primary me-2"></i>
+                                <span data-en="AI Analysis Results" data-fa="نتایج تحلیل هوش مصنوعی">AI Analysis Results</span>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Summary -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold" data-en="Summary" data-fa="خلاصه">Summary</h6>
+                                <div class="border rounded p-3 bg-light" id="aiSummary" contenteditable="true">
+                                    This topic explores the implementation of renewable energy solutions in urban environments, focusing on solar panels, wind turbines, and energy storage systems. The discussion aims to evaluate feasibility, costs, and environmental impact.
+                                </div>
+                            </div>
+
+                            <!-- Key Points -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold" data-en="Key Discussion Points" data-fa="نکات کلیدی بحث">Key Discussion Points</h6>
+                                <div class="border rounded p-3 bg-light" id="aiKeyPoints" contenteditable="true">
+                                    <ul>
+                                        <li>Cost-effectiveness of different renewable energy technologies</li>
+                                        <li>Infrastructure requirements and urban planning considerations</li>
+                                        <li>Environmental benefits vs. implementation challenges</li>
+                                        <li>Government policies and incentives</li>
+                                        <li>Long-term sustainability and maintenance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Voting Options -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold" data-en="Suggested Voting Options" data-fa="گزینه‌های رای‌گیری پیشنهادی">Suggested Voting Options</h6>
+                                <div class="border rounded p-3 bg-light" id="aiVotingOptions" contenteditable="true">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="votingOption" disabled>
+                                        <label class="form-check-label">Prioritize solar energy implementation</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="votingOption" disabled>
+                                        <label class="form-check-label">Focus on wind energy solutions</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="votingOption" disabled>
+                                        <label class="form-check-label">Implement mixed renewable energy approach</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="votingOption" disabled>
+                                        <label class="form-check-label">Delay implementation pending further research</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex gap-3">
+                                <button type="button" class="btn btn-success btn-lg" id="publishTopic">
+                                    <i class="fas fa-check me-2"></i>
+                                    <span data-en="Publish Topic" data-fa="انتشار موضوع">Publish Topic</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary btn-lg" id="regenerateAnalysis">
+                                    <i class="fas fa-redo me-2"></i>
+                                    <span data-en="Regenerate Analysis" data-fa="تولید مجدد تحلیل">Regenerate Analysis</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        <span data-en="Topic Published!" data-fa="موضوع منتشر شد!">Topic Published!</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p data-en="Your topic has been successfully published and is now available for discussions. You've earned 50 LMC coins!" 
+                       data-fa="موضوع شما با موفقیت منتشر شد و اکنون برای بحث در دسترس است. شما 50 سکه LMC کسب کرده‌اید!">
+                        Your topic has been successfully published and is now available for discussions. You've earned 50 LMC coins!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="topic.html" class="btn btn-primary">
+                        <span data-en="View Topic" data-fa="مشاهده موضوع">View Topic</span>
+                    </a>
+                    <a href="dashboard.html" class="btn btn-outline-secondary">
+                        <span data-en="Back to Dashboard" data-fa="بازگشت به داشبورد">Back to Dashboard</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LogikMeter</h5>
+                    <p data-en="Intelligent discussion platform with AI-powered analysis" data-fa="پلتفرم بحث هوشمند با تحلیل هوش مصنوعی">
+                        Intelligent discussion platform with AI-powered analysis
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 LogikMeter. <span data-en="All rights reserved." data-fa="تمام حقوق محفوظ است.">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Topic creation specific functionality
+        document.getElementById('requestAnalysis').addEventListener('click', function() {
+            const title = document.getElementById('topicTitle').value;
+            const description = document.getElementById('topicDescription').value;
+            const category = document.getElementById('topicCategory').value;
+            
+            if (!title || !description || !category) {
+                alert('Please fill in all required fields before requesting AI analysis.');
+                return;
+            }
+            
+            // Show loading state
+            this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
+            this.disabled = true;
+            
+            // Simulate AI analysis delay
+            setTimeout(() => {
+                document.getElementById('analysisResults').style.display = 'block';
+                document.getElementById('analysisResults').scrollIntoView({ behavior: 'smooth' });
+                this.innerHTML = '<i class="fas fa-robot me-2"></i>Request AI Analysis';
+                this.disabled = false;
+            }, 2000);
+        });
+        
+        document.getElementById('publishTopic').addEventListener('click', function() {
+            // Show success modal
+            const modal = new bootstrap.Modal(document.getElementById('successModal'));
+            modal.show();
+        });
+        
+        document.getElementById('regenerateAnalysis').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Regenerating...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-redo me-2"></i>Regenerate Analysis';
+                this.disabled = false;
+                alert('Analysis regenerated with new insights!');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
