@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change Solutions - LogikMeter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-brain me-2"></i>LogikMeter
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-en="Home" data-fa="خانه">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html" data-en="Dashboard" data-fa="داشبورد">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="topics.html" data-en="Topics" data-fa="موضوعات">Topics</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Language Toggle -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('fa')">فارسی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- User Menu -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>John Doe
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="wallet.html"><i class="fas fa-wallet me-2"></i><span data-en="Wallet" data-fa="کیف پول">Wallet</span></a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i><span data-en="Settings" data-fa="تنظیمات">Settings</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i><span data-en="Logout" data-fa="خروج">Logout</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Topic Content -->
+                <div class="col-lg-8">
+                    <!-- Topic Header -->
+                    <div class="topic-header mb-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <span class="badge bg-success mb-2">Environment</span>
+                                <h1 class="h3 mb-2">Climate Change Solutions for Urban Areas</h1>
+                                <div class="text-muted">
+                                    <small>
+                                        <i class="fas fa-user me-1"></i>Created by John Doe
+                                        <span class="mx-2">•</span>
+                                        <i class="fas fa-clock me-1"></i>2 hours ago
+                                        <span class="mx-2">•</span>
+                                        <i class="fas fa-users me-1"></i>12 participants
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-warning fs-6">Active Discussion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Topic Description -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Topic Description" data-fa="توضیحات موضوع">Topic Description</h5>
+                            <p class="card-text">
+                                This discussion focuses on practical and implementable solutions to combat climate change specifically in urban environments. We'll explore renewable energy integration, sustainable transportation, green building practices, and waste management strategies that cities can adopt to reduce their carbon footprint and create more sustainable living spaces for their residents.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- AI Analysis -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-robot text-primary me-2"></i>
+                                <span data-en="AI Analysis" data-fa="تحلیل هوش مصنوعی">AI Analysis</span>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="fw-bold" data-en="Summary" data-fa="خلاصه">Summary</h6>
+                                <p>Urban climate solutions require integrated approaches combining renewable energy, sustainable transport, green infrastructure, and circular economy principles. Success depends on policy support, community engagement, and technological innovation.</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="fw-bold" data-en="Key Discussion Points" data-fa="نکات کلیدی بحث">Key Discussion Points</h6>
+                                <ul>
+                                    <li>Renewable energy integration (solar, wind, geothermal)</li>
+                                    <li>Sustainable transportation systems</li>
+                                    <li>Green building and urban planning</li>
+                                    <li>Waste reduction and circular economy</li>
+                                    <li>Policy frameworks and incentives</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voting Section -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-vote-yea text-success me-2"></i>
+                                <span data-en="Vote on Best Solution" data-fa="رای به بهترین راه‌حل">Vote on Best Solution</span>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-3" data-en="Choose the most effective approach for urban climate action:" data-fa="مؤثرترین رویکرد برای اقدام اقلیمی شهری را انتخاب کنید:">
+                                Choose the most effective approach for urban climate action:
+                            </p>
+                            
+                            <div class="voting-options">
+                                <div class="form-check mb-3 p-3 border rounded">
+                                    <input class="form-check-input" type="radio" name="vote" id="vote1" value="renewable">
+                                    <label class="form-check-label w-100" for="vote1">
+                                        <strong>Prioritize Renewable Energy Infrastructure</strong>
+                                        <div class="text-muted small mt-1">Focus on solar panels, wind turbines, and energy storage systems</div>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-success" style="width: 35%"></div>
+                                        </div>
+                                        <small class="text-muted">35% (42 votes)</small>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-3 p-3 border rounded">
+                                    <input class="form-check-input" type="radio" name="vote" id="vote2" value="transport">
+                                    <label class="form-check-label w-100" for="vote2">
+                                        <strong>Sustainable Transportation Systems</strong>
+                                        <div class="text-muted small mt-1">Electric public transport, bike lanes, and car-free zones</div>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-primary" style="width: 28%"></div>
+                                        </div>
+                                        <small class="text-muted">28% (34 votes)</small>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-3 p-3 border rounded">
+                                    <input class="form-check-input" type="radio" name="vote" id="vote3" value="integrated">
+                                    <label class="form-check-label w-100" for="vote3">
+                                        <strong>Integrated Multi-Solution Approach</strong>
+                                        <div class="text-muted small mt-1">Combine all strategies with phased implementation</div>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                        <small class="text-muted">25% (30 votes)</small>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-3 p-3 border rounded">
+                                    <input class="form-check-input" type="radio" name="vote" id="vote4" value="green">
+                                    <label class="form-check-label w-100" for="vote4">
+                                        <strong>Green Infrastructure and Buildings</strong>
+                                        <div class="text-muted small mt-1">Green roofs, urban forests, and sustainable construction</div>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-info" style="width: 12%"></div>
+                                        </div>
+                                        <small class="text-muted">12% (14 votes)</small>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-success" id="submitVote">
+                                    <i class="fas fa-check me-2"></i>
+                                    <span data-en="Submit Vote" data-fa="ثبت رای">Submit Vote</span>
+                                </button>
+                                <small class="text-muted ms-3">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span data-en="Voting ends in 2 hours" data-fa="رای‌گیری در 2 ساعت پایان می‌یابد">Voting ends in 2 hours</span>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-comments text-info me-2"></i>
+                                <span data-en="Discussion Comments" data-fa="نظرات بحث">Discussion Comments</span>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Comment Form -->
+                            <div class="mb-4">
+                                <textarea class="form-control" rows="3" placeholder="Share your thoughts on this topic..."></textarea>
+                                <div class="mt-2">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-paper-plane me-1"></i>
+                                        <span data-en="Post Comment" data-fa="ارسال نظر">Post Comment</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Comments List -->
+                            <div class="comments-list">
+                                <div class="comment mb-3 p-3 bg-light rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <strong>Sarah Johnson</strong>
+                                        <small class="text-muted">1 hour ago</small>
+                                    </div>
+                                    <p class="mb-0">I think the integrated approach makes the most sense. Cities need to tackle multiple aspects simultaneously rather than focusing on just one area. Copenhagen's model could be a great reference.</p>
+                                </div>
+                                
+                                <div class="comment mb-3 p-3 bg-light rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <strong>Mike Chen</strong>
+                                        <small class="text-muted">45 minutes ago</small>
+                                    </div>
+                                    <p class="mb-0">Renewable energy should be the priority. Without clean energy, other solutions won't have the same impact. We need to invest in grid modernization first.</p>
+                                </div>
+                                
+                                <div class="comment mb-3 p-3 bg-light rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <strong>Emma Rodriguez</strong>
+                                        <small class="text-muted">30 minutes ago</small>
+                                    </div>
+                                    <p class="mb-0">Transportation is where we can see immediate results. Electric buses and bike infrastructure can be implemented quickly and have visible impact on air quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Discussion Timer -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title" data-en="Discussion Timer" data-fa="تایمر بحث">Discussion Timer</h5>
+                            <div class="timer-display mb-3">
+                                <div class="h2 text-primary" id="timer">01:47:23</div>
+                                <small class="text-muted" data-en="Time remaining" data-fa="زمان باقی‌مانده">Time remaining</small>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#discussionModal">
+                                <i class="fas fa-play me-1"></i>
+                                <span data-en="Join Discussion" data-fa="پیوستن به بحث">Join Discussion</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Topic Stats -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Topic Statistics" data-fa="آمار موضوع">Topic Statistics</h5>
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <div class="stat-item">
+                                        <div class="h4 text-primary">120</div>
+                                        <small data-en="Total Votes" data-fa="کل آرا">Total Votes</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-item">
+                                        <div class="h4 text-success">12</div>
+                                        <small data-en="Participants" data-fa="شرکت‌کنندگان">Participants</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 mt-3">
+                                    <div class="stat-item">
+                                        <div class="h4 text-info">28</div>
+                                        <small data-en="Comments" data-fa="نظرات">Comments</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 mt-3">
+                                    <div class="stat-item">
+                                        <div class="h4 text-warning">850</div>
+                                        <small data-en="LMC Reward Pool" data-fa="جایزه LMC">LMC Reward Pool</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Topics -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" data-en="Related Topics" data-fa="موضوعات مرتبط">Related Topics</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action border-0 px-0">
+                                    <div class="fw-bold">Renewable Energy Policy</div>
+                                    <small class="text-muted">15 participants • Active</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 px-0">
+                                    <div class="fw-bold">Urban Transportation Future</div>
+                                    <small class="text-muted">8 participants • Voting</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 px-0">
+                                    <div class="fw-bold">Green Building Standards</div>
+                                    <small class="text-muted">22 participants • Completed</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Discussion Modal -->
+    <div class="modal fade" id="discussionModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-comments me-2"></i>
+                        <span data-en="Live Discussion" data-fa="بحث زنده">Live Discussion</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <span data-en="Join the live discussion to earn LMC coins and contribute to the topic outcome." 
+                              data-fa="برای کسب سکه LMC و مشارکت در نتیجه موضوع، به بحث زنده بپیوندید.">
+                            Join the live discussion to earn LMC coins and contribute to the topic outcome.
+                        </span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" data-en="Your Discussion Point" data-fa="نکته بحث شما">Your Discussion Point</label>
+                        <textarea class="form-control" rows="4" placeholder="Share your perspective on this topic..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <span data-en="Cancel" data-fa="لغو">Cancel</span>
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        <span data-en="Join Discussion" data-fa="پیوستن به بحث">Join Discussion</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LogikMeter</h5>
+                    <p data-en="Intelligent discussion platform with AI-powered analysis" data-fa="پلتفرم بحث هوشمند با تحلیل هوش مصنوعی">
+                        Intelligent discussion platform with AI-powered analysis
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 LogikMeter. <span data-en="All rights reserved." data-fa="تمام حقوق محفوظ است.">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Timer functionality
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            let time = timerElement.textContent.split(':');
+            let hours = parseInt(time[0]);
+            let minutes = parseInt(time[1]);
+            let seconds = parseInt(time[2]);
+            
+            if (seconds > 0) {
+                seconds--;
+            } else if (minutes > 0) {
+                minutes--;
+                seconds = 59;
+            } else if (hours > 0) {
+                hours--;
+                minutes = 59;
+                seconds = 59;
+            }
+            
+            timerElement.textContent = 
+                String(hours).padStart(2, '0') + ':' +
+                String(minutes).padStart(2, '0') + ':' +
+                String(seconds).padStart(2, '0');
+        }
+        
+        setInterval(updateTimer, 1000);
+        
+        // Vote submission
+        document.getElementById('submitVote').addEventListener('click', function() {
+            const selectedVote = document.querySelector('input[name="vote"]:checked');
+            if (selectedVote) {
+                alert('Vote submitted successfully! You earned 10 LMC coins.');
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-check me-2"></i>Vote Submitted';
+            } else {
+                alert('Please select an option before voting.');
+            }
+        });
+    </script>
+</body>
+</html>
